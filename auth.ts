@@ -1,6 +1,7 @@
 import NextAuth from 'next-auth';
 import Github from '@auth/core/providers/github';
 import Google from '@auth/core/providers/google';
+import Zoom from '@auth/core/providers/zoom';
 
 export const {
   handlers: { GET, POST },
@@ -19,6 +20,10 @@ export const {
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+    Zoom({
+      clientId: process.env.ZOOM_CLIENT_ID,
+      clientSecret: process.env.ZOOM_CLIENT_SECRET,
     }),
   ],
   callbacks: {

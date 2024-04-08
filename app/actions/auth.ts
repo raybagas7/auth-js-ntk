@@ -14,6 +14,12 @@ export async function signInWithGoogleAction(formData: FormData) {
     redirectTo: '/dashboard/todos',
   });
 }
+export async function signInWithZoomAction(formData: FormData) {
+  console.log('singin in with google');
+  await signIn('zoom', {
+    redirectTo: '/dashboard/todos',
+  });
+}
 
 export async function signOutAction() {
   await signOut({
