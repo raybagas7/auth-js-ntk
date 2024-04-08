@@ -1,4 +1,7 @@
-import { signInWithGithubAction } from '@/app/actions/auth';
+import {
+  signInWithGithubAction,
+  signInWithGoogleAction,
+} from '@/app/actions/auth';
 import React from 'react';
 
 const SignIn = () => {
@@ -8,6 +11,11 @@ const SignIn = () => {
       <form action={signInWithGithubAction}>
         <button type="submit" className="py-2 px-3 bg-orange-500 rounded-xl">
           SignIn with Github
+        </button>
+      </form>
+      <form action={signInWithGoogleAction}>
+        <button type="submit" className="py-2 px-3 bg-orange-500 rounded-xl">
+          SignIn with Google
         </button>
       </form>
     </>
