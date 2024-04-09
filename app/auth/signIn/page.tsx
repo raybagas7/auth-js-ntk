@@ -1,4 +1,5 @@
 import {
+  signInWithEmailAction,
   signInWithGithubAction,
   signInWithGoogleAction,
   signInWithZoomAction,
@@ -22,6 +23,14 @@ const SignIn = () => {
       <form action={signInWithZoomAction}>
         <button type="submit" className="py-2 px-3 bg-orange-500 rounded-xl">
           SignIn with Zoom
+        </button>
+      </form>
+      <br />
+      <form action={signInWithEmailAction}>
+        Email:{' '}
+        <input className="text-black" name="email-address" type="email" />
+        <button type="submit" className="py-2 px-3 bg-orange-500 rounded-xl">
+          SignIn via email
         </button>
       </form>
     </>
